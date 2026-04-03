@@ -25,7 +25,7 @@ export default function BookDetails() {
 
     async function fetchBook() {
       try {
-        const res = await axios.get(`http://localhost:5000/api/books/${id}`);
+        const res = await axios.get(`https://bookclub-r1r8.onrender.com/api/comments/${commentId}`);
         setBook(res.data);
       } catch (error) {
         console.error("Fetch book details error:", error);
@@ -34,7 +34,7 @@ export default function BookDetails() {
 
     async function fetchComments() {
       try {
-        const res = await axios.get(`http://localhost:5000/api/comments/${id}`);
+        const res = await axios.get(`https://bookclub-r1r8.onrender.com/api/comments/${id}`);
         setComments(res.data);
       } catch (error) {
         console.error("Fetch comments error:", error);
@@ -65,7 +65,7 @@ export default function BookDetails() {
     }
 
     try {
-      const res = await axios.post("http://localhost:5000/api/comments", {
+      const res = await axios.post("https://bookclub-r1r8.onrender.com/api/comments/${commentId}", {
         email: currentUserEmail,
         bookId: id,
         text: commentText,
@@ -87,7 +87,7 @@ export default function BookDetails() {
   async function handleDeleteComment(commentId) {
     try {
       const res = await axios.delete(
-        `http://localhost:5000/api/comments/${commentId}`,
+        `https://bookclub-r1r8.onrender.com/api/comments/${commentId}`,
         {
           data: { email: currentUserEmail },
         }

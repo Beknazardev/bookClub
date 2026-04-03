@@ -33,7 +33,7 @@ export default function Profile() {
     async function fetchProfile() {
       try {
         const userRes = await axios.get(
-          `http://localhost:5000/api/users/profile/${currentUserEmail}`
+          `https://bookclub-r1r8.onrender.com/api/users/profile/${currentUserEmail}`
         );
         setUser(userRes.data);
 
@@ -87,7 +87,7 @@ export default function Profile() {
       formData.append("avatar", avatarFile);
 
       const res = await axios.post(
-        "http://localhost:5000/api/users/upload-avatar",
+        "https://bookclub-r1r8.onrender.com/api/users/upload-avatar",
         formData,
         {
           headers: {
@@ -117,7 +117,7 @@ export default function Profile() {
     e.preventDefault();
 
     try {
-      const res = await axios.put("http://localhost:5000/api/users/profile", {
+      const res = await axios.put("https://bookclub-r1r8.onrender.com/api/users/profile", {
         email: currentUserEmail,
         firstName: form.firstName,
         lastName: form.lastName,

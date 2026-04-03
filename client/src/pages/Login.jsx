@@ -23,7 +23,7 @@ export default function Login() {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", form);
+      const res = await axios.post("https://bookclub-r1r8.onrender.com/api/auth/login", form);
 
       localStorage.setItem("bookclubUser", JSON.stringify(res.data.user));
 

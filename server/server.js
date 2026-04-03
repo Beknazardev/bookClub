@@ -626,8 +626,7 @@ app.post("/api/users/upload-avatar", upload.single("avatar"), async (req, res) =
       return res.status(404).json({ message: "User not found" });
     }
 
-    const avatarPath = `http://localhost:${process.env.PORT || 5000}/uploads/${req.file.filename}`;
-
+const avatarPath = `${req.protocol}://${req.get("host")}/uploads/${req.file.filename}`;
     user.avatar = avatarPath;
     await user.save();
 

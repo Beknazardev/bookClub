@@ -11,7 +11,7 @@ export default function Books() {
   useEffect(() => {
     async function fetchBooks() {
       try {
-        const res = await axios.get("http://localhost:5000/api/books");
+        const res = await axios.get("https://bookclub-r1r8.onrender.com/api/books");
         setBooks(res.data);
       } catch (error) {
         console.error("Fetch books error:", error);

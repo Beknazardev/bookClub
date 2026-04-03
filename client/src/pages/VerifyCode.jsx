@@ -13,7 +13,7 @@ export default function VerifyCode() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/auth/verify-code", {
+      await axios.post("https://bookclub-r1r8.onrender.com/api/auth/verify-code", {
         email,
         code,
       });
