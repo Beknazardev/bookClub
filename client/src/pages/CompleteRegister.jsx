@@ -39,7 +39,7 @@ export default function CompleteRegister() {
     }
 
     try {
-      await axios.post("https://bookclub-r1r8.onrender.com/api/comments/${commentId}", {
+      await axios.post("https://bookclub-1-64ys.onrender.com/api/auth/complete-register", {
         email,
         firstName: form.firstName,
         lastName: form.lastName,

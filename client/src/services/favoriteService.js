@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "https://bookclub-r1r8.onrender.com/api";;
+const API = "https://bookclub-1-64ys.onrender.com/api/favorites";
 
 export async function toggleFavorite(email, bookId) {
   const res = await axios.post(`${API_URL}/toggle`, {

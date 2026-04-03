@@ -10,7 +10,7 @@ export default function EmailStep() {
     e.preventDefault();
 
     try {
-      await axios.post("https://bookclub-r1r8.onrender.com/api/auth/send-verification", {
+      await axios.post("https://bookclub-1-64ys.onrender.com/api/auth/send-verification", {
         email,
       });
 
